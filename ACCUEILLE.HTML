@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <link rel="stylesheet" href="ACCUEILLE.CSS">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css">
+
+</head>
+
+<body>
+   
+    <div class="bg">
+        <header>
+            <div class="container-fluid test">
+                <img class="logo" src="logo_bakei.png" alt="logo-bakei.png">
+            </div>
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776; <!-- Icône hamburger -->
+                </div>
+                <ul class="main-menu" id="menu">
+                    <li><a href="#">Accueil</a></li>
+    
+                    <li class="has-submenu">
+                        <a href="#">ENTREPRISE <i class="fi fi-br-check"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Développement</a></li>
+                            <li><a href="#">SEO</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="has-submenu">
+                        <a href="#">FICHE METIER <i class="fi fi-br-check"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Développement</a></li>
+                            <li><a href="#">SEO</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="has-submenu">
+                        <a href="#">FORMATION <i class="fi fi-br-check"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Développement</a></li>
+                            <li><a href="#">SEO</a></li>
+                        </ul>
+                    </li>
+    
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#" class="signup-link">Inscrivez-vous à Bakeli <i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+       <section>
+        <div class="main-content">
+            <h1>Bienvenue à bakeli</h1>
+            <p>Lorem50 ipsum dolor sit amet consectetur, adipisicing elit. Quos porro assumenda <br>
+                suscipit qui sedFNJJJJCJOZIZDH IZD IZDHHIOOD HJHZH ZDIHIZOH <br>
+                 ZHBHHHHHZ ZDIHIZOHIH IHBBHIVV HHIIUUGIUT GUUUUGG H.</p>
+        </div>
+
+        <div>
+
+            <div class="buttons">
+                <a href="page1.html" class="button orange">voir les formulaire de </a>
+                <a href="page2.html" class="button white">inscrivez vous a bakeli</a>
+            </div>
+        </div>
+
+       </section>
+        
+
+    </div>
+
+    <script src="script.js">
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+const submenuItems = document.querySelectorAll('.has-submenu > a');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+submenuItems.forEach(item => {
+    item.addEventListener('click', (event) => {
+        const submenu = item.nextElementSibling;  
+        submenu.classList.toggle('active');
+        event.preventDefault(); 
+    });
+});
+    </script>
+
+
+    
+</body>
+
+</html>

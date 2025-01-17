@@ -1,0 +1,173 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+}
+
+
+.bg {
+    background-image: url(INFO.JPG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}   
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 10%;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f8f6f6;
+}
+
+.logo { 
+    height:60px;
+     
+}
+
+.pages {
+    display: flex;
+    gap: 20px;
+}
+
+.page {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px; 
+    text-align: center;
+    font-size: 18px;
+}
+
+footer {
+    display: flex;
+    justify-content: center; 
+    padding: 20px 0;
+    background-color: #f4f4f4;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+   
+}
+
+.button {
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.white {
+    background-color: #fff;
+    color: #333;
+    border: 5px solid #ccc;
+}
+
+section {
+
+    height: 80vh;
+    padding: 10% 10%;
+}
+
+ section {
+    text-decoration: none;
+    color: #ccc;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.has-submenu .submenu {
+    display: none;  
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px;
+    width: 180px;
+}
+
+.has-submenu:hover .submenu {
+    display: block;  
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .main-menu {
+        display: none;  
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .main-menu li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;  
+    }
+
+    .main-menu.active {
+        display: flex;  
+    }
+
+    .has-submenu .submenu {
+        display: none;  
+    }
+
+    .has-submenu.active .submenu {
+        display: block;  
+    }
+    .main-menu li a {
+        font-size: 16px;
+    }
+}
